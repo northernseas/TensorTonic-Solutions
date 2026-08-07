@@ -38,12 +38,18 @@ class Conv2d(nn.Module):
             device=x.device
         )
 
-        for d2 in range(D2):
-            for i in range(out_h):
-                for j in range(out_w):
-                    patch = x[:, :, i:i+K, j:j+K] # (N, D1, K, K)
-                    kernel = self.weight[d2] # (D1, K, K)
-                    res = (patch * kernel).sum(dim=(1, 2, 3)) # (N,)
-                    out[:, d2, i, j] = res + self.bias[d2]
-            
+        # for d2 in range(D2):
+        #     for i in range(out_h):
+        #         for j in range(out_w):
+        #             patch = x[:, :, i:i+K, j:j+K] # (N, D1, K, K)
+        #             kernel = self.weight[d2] # (D1, K, K)
+        #             res = (patch * kernel).sum(dim=(1, 2, 3)) # (N,)
+        #             out[:, d2, i, j] = res + self.bias[d2]
+
+        for i in range(out_h):
+            for j in range(out_w):
+                patch = x[:, :, i:i+K, j:j+K].reshape(N, -1) # (N, -1)
+                kernel = self.weight.reshape(D2, -1) # (D2, -1)
+                out[:, :, i, j] = patch @ kernel.T + self.bias
+
         return out

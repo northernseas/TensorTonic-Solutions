@@ -9,9 +9,11 @@ def compute_loss(pred, target, method, delta=1.0):
     if method == "mse":
         loss = (pred - target) ** 2
     elif method == "cross_entropy":
-        n = torch.arange(len(target))
+        # loss = -log(exp(pos)/sum(exp(neg)))
+        #      = -(pos - log(sum(exp(neg))))
+        # pred: (N, C)   target: (N,)
         l = pred - torch.logsumexp(pred, dim=-1, keepdim=True)
-        loss = -l[n.int(), target.int()]
+        loss = -l[range(len(target)), target.int()]
     elif method == "huber":
         alpha = pred - target
         loss = torch.where(

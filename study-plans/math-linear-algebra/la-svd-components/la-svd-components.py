@@ -9,5 +9,5 @@ def svd(A):
 
     A = np.array(A, dtype=np.float64)
 
-    U, s, V = np.linalg.svd(A, full_matrices=False, compute_uv=True)
-    return U, s, V
+    U, s, Vt = np.linalg.svd(A, full_matrices=False, compute_uv=True)
+    return U, s, Vt

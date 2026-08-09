@@ -10,10 +10,8 @@ def cosine_similarity(a, b):
     a_norm = np.linalg.norm(a)
     b_norm = np.linalg.norm(b)
 
-    if a_norm > 0:
-        a = a / np.linalg.norm(a)
-    if b_norm > 0:
-        b = b / np.linalg.norm(b)
+    if a_norm == 0 or b_norm == 0:
+        return 0.0
 
-    dot = np.dot(a, b)
+    dot = np.dot(a, b) / (a_norm * b_norm)
     return dot.item()

@@ -30,6 +30,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Linear Combination | Compute a weighted linear combination of equal-length NumPy vectors using one aligned scalar coefficient per vector. | https://www.tensortonic.com/study-plans/math-linear-algebra/la-linear-combination |
 | Low-Rank Approximation | Construct the best rank-k matrix approximation from truncated singular values and singular vectors. | https://www.tensortonic.com/study-plans/math-linear-algebra/la-low-rank-approx |
 | LU Decomposition | Factor a square matrix into lower and upper triangular matrices using the specified no-pivot LU procedure. | https://www.tensortonic.com/study-plans/math-linear-algebra/la-lu-decomposition |
+| Mahalanobis Distance | Compute Mahalanobis distance between a point and a distribution using its mean and covariance matrix. | https://www.tensortonic.com/study-plans/math-linear-algebra/la-mahalanobis |
 | Matrix Determinant | Compute the determinant of a square NumPy matrix as a scalar measure of invertibility and volume scaling. | https://www.tensortonic.com/study-plans/math-linear-algebra/la-matrix-determinant |
 | Matrix Multiply | Multiply compatible NumPy matrices and preserve the dtype produced by NumPy type-promotion rules. | https://www.tensortonic.com/study-plans/math-linear-algebra/la-matrix-multiply |
 | Matrix Rank | Compute the rank of a rectangular NumPy matrix from its number of linearly independent directions. | https://www.tensortonic.com/study-plans/math-linear-algebra/la-matrix-rank |

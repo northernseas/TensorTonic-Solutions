@@ -17,9 +17,6 @@ def scaled_dot_product_attention(Q, K, V):
     weights = np.exp(scores - scores.max(axis=-1, keepdims=True))
     # weights = np.exp(scores)
     weights = weights / weights.sum(axis=-1, keepdims=True)
-
-    # without keepdim: (N, N) / (N)->(1, N)
-    # with keepdim:    (N, N) / (1, N)
     
     attn = weights @ V
 

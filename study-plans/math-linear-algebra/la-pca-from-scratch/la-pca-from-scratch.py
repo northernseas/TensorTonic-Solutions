@@ -14,8 +14,6 @@ def pca_project(X, n_components):
 
     # Find eigenvalues/vectors
     eigenvalues, eigenvectors = np.linalg.eigh(cov)
-    eigenvalues = eigenvalues.real
-    eigenvectors = eigenvectors.real
 
     # Keep largest n_components
     idx = np.argsort(eigenvalues)[::-1][:n_components]

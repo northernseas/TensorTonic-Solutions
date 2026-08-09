@@ -7,6 +7,8 @@ def solve_linear_system(A, b):
     A = np.array(A, dtype=np.float64)
     b = np.array(b, dtype=np.float64)
 
+    return np.linalg.solve(A, b)
+
     M, N = A.shape
 
     if M == N: # square

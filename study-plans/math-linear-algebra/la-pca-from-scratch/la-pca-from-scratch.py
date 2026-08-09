@@ -18,8 +18,7 @@ def pca_project(X, n_components):
     eigenvectors = eigenvectors.real
 
     # Keep largest n_components
-    idx = np.argsort(eigenvalues)[::-1]
-    eigenvectors = eigenvectors[:, idx]
-    V = eigenvectors[:, :n_components]
+    idx = np.argsort(eigenvalues)[::-1][:n_components]
+    V = eigenvectors[:,idx]
 
     return X_norm @ V

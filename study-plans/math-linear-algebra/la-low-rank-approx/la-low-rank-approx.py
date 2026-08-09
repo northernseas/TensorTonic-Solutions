@@ -6,11 +6,11 @@ def low_rank_approximation(A, r):
     """
     A = np.array(A, dtype=np.float64)
 
-    U, s, Vt = np.linalg.svd(A, full_matrices=False, compute_uv=True)
+    U, s, Vt = np.linalg.svd(A, full_matrices=False)
 
     U = U[:, :r]
     s = s[:r]
     Vt = Vt[:r, :]
 
-    A_r = U @ np.eye(len(s)) * s @ Vt
+    A_r = U @ np.diag(s) @ Vt
     return A_r

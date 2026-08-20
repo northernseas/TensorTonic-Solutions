@@ -23,6 +23,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 |---|---|---|
 | Continuity of Activation Functions | Classify continuity and nondifferentiable points for common activation functions at supplied scalar inputs. | https://www.tensortonic.com/study-plans/math-calculus/calculus-activation-continuity |
 | Limit of a Learning Rate Schedule | Evaluate the long-run limit of an inverse-time learning-rate schedule from its initial rate and decay constant. | https://www.tensortonic.com/study-plans/math-calculus/calculus-lr-schedule-limit |
+| Sigmoid Boundedness via Squeeze Theorem | Verify sigmoid bounds numerically with a squeeze-theorem construction and expose its saturation behavior. | https://www.tensortonic.com/study-plans/math-calculus/calculus-sigmoid-squeeze |
 | Implement Cosine Similarity | Compute cosine similarity between NumPy vectors with explicit handling for zero-norm inputs. | https://www.tensortonic.com/study-plans/math-linear-algebra/la-cosine-similarity |
 | Implement Dot Product | Compute the algebraic dot product and geometric angle relationship for two equal-length NumPy vectors. | https://www.tensortonic.com/study-plans/math-linear-algebra/la-dot-product |
 | Eigendecomposition | Compute eigenvalues and aligned eigenvectors for a square NumPy matrix and verify the decomposition relationship. | https://www.tensortonic.com/study-plans/math-linear-algebra/la-eigendecomposition |

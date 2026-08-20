@@ -23,6 +23,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 |---|---|---|
 | Continuity of Activation Functions | Classify continuity and nondifferentiable points for common activation functions at supplied scalar inputs. | https://www.tensortonic.com/study-plans/math-calculus/calculus-activation-continuity |
 | Derivatives of Common Activation Functions | Compute the analytical derivative of four activation functions: Sigmoid, Tanh, ReLU, and Swish. | https://www.tensortonic.com/study-plans/math-calculus/calculus-activation-derivatives |
+| Backpropagation Through a Computation Graph | Run forward evaluation and reverse-mode backpropagation through a supplied scalar computation graph. | https://www.tensortonic.com/study-plans/math-calculus/calculus-backprop-graph |
 | Chain Rule Through a 3-Layer Network | Apply the chain rule through a three-layer scalar network to compute intermediate activations and parameter gradients. | https://www.tensortonic.com/study-plans/math-calculus/calculus-chain-rule-3layer |
 | Directional Derivative & Steepest Descent Direction | Compute a quadratic loss gradient, its directional derivative, and the normalized steepest-descent direction. | https://www.tensortonic.com/study-plans/math-calculus/calculus-directional-derivative |
 | Forward-Mode Autodiff with Dual Numbers | Implement forward-mode automatic differentiation with dual numbers carrying both values and derivatives. | https://www.tensortonic.com/study-plans/math-calculus/calculus-dual-number-autodiff |

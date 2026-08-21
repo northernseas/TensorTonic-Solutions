@@ -22,14 +22,15 @@ def momentum_gd(X, y, lr, beta, n_epochs):
         loss_2 = np.mean((X @ w_2 - y) ** 2)
         vanilla_losses.append(loss_1)
         momentum_losses.append(loss_2)
+
+        # Compute grad
+        grad = lambda w: 2 / N * X.T @ (X @ w - y)
         
         # Vanilla GD
-        grad_1 = 2 / N * X.T @ (X @ w_1 - y)
-        w_1 = w_1 - lr * grad_1
+        w_1 = w_1 - lr * grad(w_1)
 
         # Momentum GD
-        grad_2 = 2 / N * X.T @ (X @ w_2 - y)
-        v = beta * v + grad_2
+        v = beta * v + grad(w_2)
         w_2 = w_2 - lr * v
     
     return vanilla_losses, momentum_losses

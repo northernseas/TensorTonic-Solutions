@@ -21,6 +21,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 
 | Problem | Description | Link |
 |---|---|---|
+| Linear Regression from Scratch | Train linear regression from scratch with mean squared error gradients for weights and bias. | https://www.tensortonic.com/study-plans/cracking-ml/ml-linear-regression-from-scratch |
 | Continuity of Activation Functions | Classify continuity and nondifferentiable points for common activation functions at supplied scalar inputs. | https://www.tensortonic.com/study-plans/math-calculus/calculus-activation-continuity |
 | Derivatives of Common Activation Functions | Compute the analytical derivative of four activation functions: Sigmoid, Tanh, ReLU, and Swish. | https://www.tensortonic.com/study-plans/math-calculus/calculus-activation-derivatives |
 | Backpropagation Through a Computation Graph | Run forward evaluation and reverse-mode backpropagation through a supplied scalar computation graph. | https://www.tensortonic.com/study-plans/math-calculus/calculus-backprop-graph |

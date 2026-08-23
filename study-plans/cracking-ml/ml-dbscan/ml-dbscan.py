@@ -28,8 +28,7 @@ def dbscan(X, eps=0.5, min_samples=5):
 
         labels[i] = cluster
 
-        seed_set = set(neighbors) - {i}
-        seed_list = list(seed_set)
+        seed_list = list(set(neighbors) - {i})
 
         j = 0
         while j < len(seed_list):
@@ -37,10 +36,9 @@ def dbscan(X, eps=0.5, min_samples=5):
             if q not in visited:
                 visited.add(q)
                 q_neighbors = get_neighbors(X[q])
-                if len(neighbors) >= min_samples:
+                if len(q_neighbors) >= min_samples:
                     for qn in q_neighbors:
-                        if qn not in seed_set:
-                            seed_set.add(qn)
+                        if qn not in seed_list:
                             seed_list.append(qn)
             if labels[q] == -1:
                 labels[q] = cluster

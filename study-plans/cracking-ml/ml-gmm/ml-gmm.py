@@ -15,19 +15,19 @@ def gmm(X, k, max_iters=100, seed=42):
     means = X[rng.choice(N, size=k, replace=False)].copy() # (K, D)
     covs = np.full((K, D), 1) # (K, D)
 
-    def gaussian_pdf(x, mu, var):
+    def gaussian_pdf(X, mu, var):
         log_pdf = - 0.5 * np.sum(
             np.log(2 * np.pi * var) +
-            (x - mu) ** 2 / var
+            (X - mu) ** 2 / var,
+            axis=-1
         )
         return np.exp(log_pdf)
     
     for _ in range(max_iters):
         # E-step: compute responsibilities
         R = np.zeros((N, K))
-        for i in range(N):
-            for j in range(K):
-                R[i, j] = weights[j] * gaussian_pdf(X[i], means[j], covs[j])
+        for j in range(K):
+            R[:, j] = weights[j] * gaussian_pdf(X, means[j], covs[j])
         row_sums = R.sum(axis=-1, keepdims=True)
         row_sums = np.where(row_sums > 0, row_sums, 1.0)
         R /= row_sums

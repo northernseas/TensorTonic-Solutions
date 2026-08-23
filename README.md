@@ -22,6 +22,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Problem | Description | Link |
 |---|---|---|
 | Averaged Perceptron | Implement an averaged perceptron for binary classification with online mistake updates and mean weights across training steps. | https://www.tensortonic.com/study-plans/cracking-ml/ml-averaged-perceptron |
+| DBSCAN | Implement DBSCAN clustering with epsilon neighborhoods, minimum-point density checks, cluster expansion, and noise labels. | https://www.tensortonic.com/study-plans/cracking-ml/ml-dbscan |
 | Gaussian Naive Bayes | Implement Gaussian Naive Bayes with class priors, per-feature Gaussian likelihoods, and log-probability predictions. | https://www.tensortonic.com/study-plans/cracking-ml/ml-gaussian-naive-bayes |
 | K-Means Clustering | Implement K-means clustering with nearest-centroid assignments, centroid updates, convergence checks, and stable labels. | https://www.tensortonic.com/study-plans/cracking-ml/ml-kmeans |
 | K-Means++ Initialization | Implement K-means++ initialization by sampling centroids according to squared distance from the nearest chosen center. | https://www.tensortonic.com/study-plans/cracking-ml/ml-kmeans-plusplus |

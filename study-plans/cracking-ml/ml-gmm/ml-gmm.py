@@ -16,10 +16,11 @@ def gmm(X, k, max_iters=100, seed=42):
     covs = np.full((K, D), 1) # (K, D)
 
     def gaussian_pdf(x, mu, var):
-        return np.prod(
-            1 / np.sqrt(2 * np.pi * var) *
-            np.exp(- (x - mu) ** 2 / (2 * var))
+        log_pdf = - 0.5 * np.sum(
+            np.log(2 * np.pi * var) +
+            (x - mu) ** 2 / var
         )
+        return np.exp(log_pdf)
     
     for _ in range(max_iters):
         # E-step: compute responsibilities
@@ -55,7 +56,6 @@ def gmm(X, k, max_iters=100, seed=42):
             / N_j_safe[:, None]                             #    (K, 1)
             + 1e-6
         )                                                   #    (K, D)
-
         covs[N_j <= 1e-10] = 1
 
     labels = np.argmax(R, axis=-1)

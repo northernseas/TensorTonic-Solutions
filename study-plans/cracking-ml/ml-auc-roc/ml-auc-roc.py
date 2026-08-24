@@ -21,6 +21,11 @@ def auc_roc(y_true, y_scores):
         tp = np.sum(y_pred & y_true)
         fp = np.sum(y_pred & ~y_true)
 
+        # TPR = TP / #pos
+        # FPR = FP / #neg
+        # FNR = FN / #pos
+        # TNR = TN / #neg
+
         tpr.append(tp / nb_positives)
         fpr.append(fp / nb_negatives)
         

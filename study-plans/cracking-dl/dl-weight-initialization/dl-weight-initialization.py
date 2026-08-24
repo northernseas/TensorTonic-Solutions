@@ -21,6 +21,9 @@ def weight_init_params(layer_dims, method):
         elif method == "xavier_uniform":
             scale = np.sqrt(6 / (fan_in + fan_out))
 
+        # weights = np.random.normal(loc=0, scale=scale, size=shape)
+        # weights = np.random.uniform(-scale, scale, size=shape)
+        
         res.append({
             "fan_in": fan_in,
             "fan_out": fan_out,

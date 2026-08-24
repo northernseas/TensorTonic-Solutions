@@ -7,9 +7,9 @@ def auc_roc(y_true, y_scores):
     y_true = np.array(y_true)
     y_scores = np.array(y_scores, dtype=np.float64)
 
-    idx = np.argsort(y_scores)[::-1]
-    y_true = y_true[idx]
-    y_scores = y_scores[idx]
+    # idx = np.argsort(y_scores)[::-1]
+    # y_true = y_true[idx]
+    # y_scores = y_scores[idx]
 
     thresholds = np.unique(y_scores)[::-1]
     
